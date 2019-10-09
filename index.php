@@ -1,6 +1,6 @@
 <?php
 /**
-* @author evilnapsis
+* @author Caleb Loarca/Mario Perez
 **/
 
 define("ROOT", dirname(__FILE__));

@@ -159,7 +159,7 @@
       <?php else:?>
 <div class="login-box">
       <div class="login-logo">
-        <a href="./">COMPRA<b> ALOE VERA </b>SISTEMA</a>
+        <a href="./">SISTEMA DE COMPRA<b> ALOE VERA </b></a>
       </div><!-- /.login-logo -->
       <div class="login-box-body">
         <form action="./?action=processlogin" method="post">
