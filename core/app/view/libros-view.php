@@ -11,7 +11,7 @@
   </ul>
 </div>
 </div>
-		<h1>Listado de Libros</h1>
+		<h1>Listado de Vales</h1>
 <br>
 		<?php
          
@@ -49,7 +49,7 @@
 
 
 		}else{
-			echo "<p class='alert alert-danger'>No hay libros en el sistema</p>";
+			echo "<p class='alert alert-danger'>No hay Vales en el sistema</p>";
 		}
 
 
