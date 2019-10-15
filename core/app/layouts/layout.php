@@ -33,8 +33,6 @@
 <script src="plugins/alertifyJS/alertify.js"></script>
 
 <!-- include alertify script -->
-
-  
   
           <script src="plugins/jspdf/jspdf.min.js"></script>
           <script src="plugins/jspdf/jspdf.plugin.autotable.js"></script>
@@ -45,13 +43,14 @@
 
   </head>
 
-  <body class="<?php if(isset($_SESSION["user_id"]) || isset($_SESSION["client_id"])):?>  skin-blue-light sidebar-mini <?php else:?>login-page<?php endif; ?>" >
-    <div class="wrapper">
+  <body class="<?php if(isset($_SESSION["user_id"]) || isset($_SESSION["client_id"])):?>  skin-blue-light sidebar-mini <?php else:?>login-page<?php endif; ?> "
+  style="background-image: url(image/palki.jpg); background-size: 100% > <div class="wrapper">
       <!-- Main Header -->
       <?php if(isset($_SESSION["user_id"]) || isset($_SESSION["client_id"])):?>
       <header class="main-header">
         <!-- Logo -->
-        <a href="./" class="logo">
+              
+        <a href=".." class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini"><b>A</b>V</span>
           <!-- logo for regular state and mobile devices -->
@@ -81,7 +80,6 @@
                 </a>
                 <ul class="dropdown-menu">
                   <!-- The user image in the menu -->
-              
                   
                   <!-- Menu Footer-->
                   <li class="user-footer">
@@ -103,7 +101,7 @@
         <section class="sidebar">
 
 		  
-          <!-- Sidebar Menu -->
+          <!-- BARRA DE OPCIONES  Sidebar Menu -->
           <ul class="sidebar-menu">
             <li class="header">ADMINISTRACION</li>
             <?php if(isset($_SESSION["user_id"])):?>
@@ -144,7 +142,7 @@
 
       <!-- Content Wrapper. Contains page content -->
       <?php if(isset($_SESSION["user_id"]) || isset($_SESSION["client_id"])):?>
-      <div class="content-wrapper">
+      <div class="content-wrapper" style="background-image: url(image/aloe-vera.jpg); background-size: 100% > <div class="wrapper">
       <div class="content">
         <?php View::load("index");?>
         </div>
@@ -157,10 +155,13 @@
         <strong>Copyright &copy; 2019 </strong>
       </footer>
       <?php else:?>
+      
 <div class="login-box">
       <div class="login-logo">
         <a href="./">SISTEMA DE COMPRA<b> ALOE VERA </b></a>
-      </div><!-- /.login-logo -->
+      </div>
+      
+      <!-- /.login-logo -->
       <div class="login-box-body">
         <form action="./?action=processlogin" method="post">
           <div class="form-group has-feedback">
