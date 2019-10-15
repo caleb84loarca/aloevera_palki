@@ -7,6 +7,9 @@ $libros = LibrosData::getAll();
 <div class="row">
 	<div class="col-md-12 text-white bg-blue">
 	    <h1>Bienvenido a Sistema de Compra Aloe Vera - PALKI, S.A.</h1>
+        <div>
+          <img src="image/Palki.png" width="380" height="50">
+        </div>
 </div>
 </div>
 <br><br><br><br>
@@ -15,7 +18,7 @@ $libros = LibrosData::getAll();
         <!-- ./col -->
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
-          <div class="small-box bg-green">
+          <div class="small-box bg-black">
             <div class="inner">
               <h3><?php echo count(LibrosData::getAll());?></h3>
 

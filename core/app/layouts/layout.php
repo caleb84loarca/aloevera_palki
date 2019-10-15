@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <title>Compra Aloe Vera | PALKI</title>
+    <link rel="icon" type="image/png" href="image/logo.png" />
+
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- Bootstrap 3.3.4 -->
     <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -49,10 +51,11 @@
       <?php if(isset($_SESSION["user_id"]) || isset($_SESSION["client_id"])):?>
       <header class="main-header">
         <!-- Logo -->
-              
+        
         <a href=".." class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini"><b>A</b>V</span>
+          
           <!-- logo for regular state and mobile devices -->
           <span class="logo-lg">ALOE<b> VERA </b>SISTEMA</span>
         </a>
@@ -152,6 +155,7 @@
 <div class="login-box">
       <div class="login-logo">
         <a href="./">SISTEMA DE COMPRA<b> ALOE VERA </b></a>
+        
       </div>
       
       <!-- /.login-logo -->

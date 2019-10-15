@@ -5,23 +5,24 @@ $autores = AutorData::getAll();
 <div class="row">
 	<div class="col-md-12">
 	<h1>Ingreso Vale de Compra</h1>
+    <img src="image/Palki.png" width="350" height="50">
 	<br>
+
 		<form class="form-horizontal" method="post" id="addlibro" action="index.php?view=addlibro" role="form">
 
 
   <div class="form-group">
     <div class="col-md-6">   
-    <label for="text" class="col-lg-2 control-label">Vale Compra #</label>
-      
-     <select name="autor_id" required class="form-control">
-        <?php 
-        foreach($autores as $autor):?>
-
-            <option value="<?php echo $autor->id;
-             ?>">
-            <?php echo $autor->id." "?></option>
-        <?php endforeach;?>
-     </select>   
+        <label for="text" class="col-lg-2 control-label">Vale Compra #</label>      
+        <select name="autor_id" required class="form-control">
+             <?php 
+                foreach($autores as $autor):?>      
+                <option value="<?php echo $autor->id;
+                    ?>">
+                    <?php echo $autor->id." "?>
+                </option>
+            <?php endforeach;?>
+        </select>   
     </div>
   </div>
  
