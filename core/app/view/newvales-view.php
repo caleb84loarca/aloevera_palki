@@ -83,8 +83,10 @@ $autores = AutorData::getAll();
 </div> <!-- fin de encabezado de vale-->
 
 <!-- detalle del vale -->
+<fieldset>
+ <legend>Ingreso Detalle Vale</legend>
   <div class="form-group">
-      
+ 
       <div class="col-md-2">
       <label for="inputEmail1" class="col-lg-10 control-label">MEDIDA DE PLANTA</label>
     
@@ -115,10 +117,12 @@ $autores = AutorData::getAll();
                 <label for="inputEmail1" class="col-lg-8 control-label">UNIDADES</label>
                 <input type="text" name="unidades" valor="unidades">
             </div> 
+            
       <div class="col-md-2">
         <label for="inputEmail1" class="col-lg-10 control-label">PRECIO UNITARIO</label>
         <input type="text" name="precio" valor="precio">
       </div> 
+
 
             <div class="col-md-2">
                 <label for="inputEmail1" class="col-lg-10 control-label">VALOR TOTAL</label>
@@ -127,15 +131,43 @@ $autores = AutorData::getAll();
                     <?php foreach($autores as $autor):?>
                     <option value="<?php echo $autor->id;?>"><?php echo $autor->nombre." ".$autor->apellido;?></option>
                     <?php endforeach;?>
-                    </select>
-            
+                    </select>            
             </div>
+<button class="" type=''>OK</button>
 
-  </div>  
+  </div>  <!--cierre ingreso detalle-->
+
+  
+  <table class="table table-bordered table-hover">
+			<thead>
+			<th>Medida Planta</th>
+			<th>Invernadero</th>
+			<th>Seccion / Cama</th>
+			<th>Unidades</th>
+            <th>Precio Unitario</th>
+            <th>Valor Total</th>
+			</thead>
+  
+            <tr>
+                <td>Celda 4</td>
+                <td>Celda 5</td>
+                <td>Celda 6</td>
+                <td>Celda 6</td>
+                <td>Celda 6</td>
+                <td>Celda 6</td>
+                <td style="width:50px;">
+				<a href="index.php?view=dellibro&id=<?php echo $libro->id;?>" class="btn btn-danger btn-xs">Eliminar</a>
+                </td>
+
+            </tr>
+</table>
+
+
 
 <!-- boton y alerta-->
-    <div>
-        <p class="alert alert-info">* Campos obligatorios</p>
+
+    <div>   
+        <p class="alert alert-info">* Campos obligatorios</p>        
     </div>
   <div class="form-group">
     <div class="col-lg-offset-2 col-lg-10">
