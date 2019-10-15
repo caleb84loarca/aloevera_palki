@@ -44,7 +44,7 @@
   </head>
 
   <body class="<?php if(isset($_SESSION["user_id"]) || isset($_SESSION["client_id"])):?>  skin-blue-light sidebar-mini <?php else:?>login-page<?php endif; ?> "
-  style="background-image: url(image/palki.jpg); background-size: 100% > <div class="wrapper">
+  style="background-image: url(image/fondoverde.jpg); background-size: 100% > <div class="wrapper">
       <!-- Main Header -->
       <?php if(isset($_SESSION["user_id"]) || isset($_SESSION["client_id"])):?>
       <header class="main-header">
@@ -121,17 +121,10 @@
               <ul class="treeview-menu">
                 <li><a href="./?view=categories">Proveedores</a></li>
 				<li><a href="./?view=umedida">Usuarios</a></li>
-
-				 
+	 
               </ul>
             </li>
-			
-			
-		
-          
-
-
-            
+			           
           <?php endif;?>
 
           </ul><!-- /.sidebar-menu -->
@@ -142,8 +135,8 @@
 
       <!-- Content Wrapper. Contains page content -->
       <?php if(isset($_SESSION["user_id"]) || isset($_SESSION["client_id"])):?>
-      <div class="content-wrapper" style="background-image: url(image/aloe-vera.jpg); background-size: 100% > <div class="wrapper">
-      <div class="content">
+      <div class="content-wrapper" style="background-image: url(image/fondoverde2.jpg); background-size: 100% > <div class="wrapper">
+      <div class="content" >
         <?php View::load("index");?>
         </div>
       </div><!-- /.content-wrapper -->
@@ -162,9 +155,10 @@
       </div>
       
       <!-- /.login-logo -->
-      <div class="login-box-body">
+      <div class="login-box-body" >
+      <img src="image/Palki2.jpg" width="300" height="250" aling="center">
         <form action="./?action=processlogin" method="post">
-          <div class="form-group has-feedback">
+          <div class="form-group has-feedback" >
             <input type="text" name="username" required class="form-control" placeholder="Usuario"/>
             <span class="glyphicon glyphicon-user form-control-feedback"></span>
           </div>
@@ -172,6 +166,7 @@
             <input type="password" name="password" required class="form-control" placeholder="Password"/>
             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
           </div>
+
           <div class="row">
 
             <div class="col-xs-12">
