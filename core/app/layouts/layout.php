@@ -117,7 +117,25 @@
                 <li><a href="./?view=libros">Listado de Vales</a></li>
 				<li><a href="./?view=notas">Consulta de Vales</a></li>
 			   </ul>
-             </li>			   
+             </li>	
+
+      <li class="treeview">
+              <a href="#"><i class='fa fa-shopping-cart'></i> <span>Gestion de Proveedores</span> <i class="fa fa-angle-left pull-right"></i></a>
+              <ul class="treeview-menu">
+                <li><a href="./?view=newproveedor">Ingreso de Proveedor</a></li>
+                <li><a href="./?view=libros">Listado de Proveedores</a></li>
+        <li><a href="./?view=notas">Consulta de Proveedores</a></li>
+         </ul>
+             </li>  	  
+
+        <li class="treeview">
+              <a href="#"><i class='fa fa-shopping-cart'></i> <span>Gestion de Usuarios</span> <i class="fa fa-angle-left pull-right"></i></a>
+              <ul class="treeview-menu">
+                <li><a href="./?view=newuser">Ingreso de Usuario</a></li>
+                <li><a href="./?view=libros">Listado de Usuarios</a></li>
+        <li><a href="./?view=notas">Consulta de Usuarios</a></li>
+         </ul>
+             </li>  
 
             <li class="treeview">
               <a href="#"><i class='fa fa-database'></i> <span>Catalogos</span> <i class="fa fa-angle-left pull-right"></i></a>
