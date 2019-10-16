@@ -28,7 +28,7 @@ $autores = AutorData::getAll();
  
   <div class="form-group">
             <div class="col-md-3">
-                     <label for="inputEmail1" class="col-lg-6 control-label">Fecha de Compra*</label>
+                     <label for="inputEmail1" class="col-lg-6 control-label">Fecha de Ingreso*</label>
                         <input type="date" name="sd"  required value="<?php if(isset($_GET["sd"])){ echo $_GET["sd"]; }?>" class="form-control">
 
                     <label for="inputEmail1" class="col-lg-2 control-label">Pedido</label>
@@ -133,9 +133,11 @@ $autores = AutorData::getAll();
                     <?php endforeach;?>
                     </select>            
             </div>
-<button class="" type=''>OK</button>
+
 
   </div>  <!--cierre ingreso detalle-->
+
+</fieldset>
 
   
   <table class="table table-bordered table-hover">
@@ -147,20 +149,20 @@ $autores = AutorData::getAll();
             <th>Precio Unitario</th>
             <th>Valor Total</th>
 			</thead>
+
+        <tr>
+        <td><<?php echo $autor->id;?>"><?php echo $autor->nombre." ".$autor->apellido;?></td>
+        <td><?php echo $autor->nombre." ".$autor->apellido; ?></td>
+        <td><?php echo $autor->id;?>"><?php echo $autor->nombre." ".$autor->apellido;?></td>
   
-            <tr>
-                <td>Celda 4</td>
-                <td>Celda 5</td>
-                <td>Celda 6</td>
-                <td>Celda 6</td>
-                <td>Celda 6</td>
-                <td>Celda 6</td>
+           
                 <td style="width:50px;">
 				<a href="index.php?view=dellibro&id=<?php echo $libro->id;?>" class="btn btn-danger btn-xs">Eliminar</a>
                 </td>
 
             </tr>
 </table>
+
 
 
 
