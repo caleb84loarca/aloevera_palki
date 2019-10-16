@@ -1,18 +1,20 @@
 <div class="row">
 	<div class="col-md-12">
-<div class="btn-group pull-right">
-	<a href="index.php?view=newvales" class="btn btn-default"><i class='fa fa-book'></i> Nuevo Vale</a>
-<div class="btn-group pull-right">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-    <i class="fa fa-download"></i> Descargar <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" role="menu">
-    <li><a href="report/providers-word.php">Word 2007 (.docx)</a></li>
-  </ul>
-</div>
-</div>
+		<div class="btn-group pull-right">
+			<a href="index.php?view=newvales" class="btn btn-default"><i class='fa fa-book'></i> Nuevo Vale</a>
+				<div class="btn-group pull-right">
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+						<i class="fa fa-download"></i> Descargar <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="report/providers-word.php">Word 2007 (.docx)</a></li>
+					</ul>
+				</div>
+		</div>  
+
+
 		<h1>Listado de Vales</h1>
-<br>
+		<br>
 		<?php
          
 		$libros = LibrosData::getAll();
@@ -47,7 +49,6 @@
 			}
 
 
-
 		}else{
 			echo "<p class='alert alert-danger'>No hay libros en el sistema</p>";
 		}
@@ -55,6 +56,6 @@
 
 		?>
 
-
+	
 	</div>
 </div>
