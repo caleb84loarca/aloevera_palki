@@ -46,17 +46,27 @@ $autores = AutorData::getAll();
 
       <form class="form-horizontal" method="post" id="addlibro" action="index.php?view=addlibro" role="form">
 <div class="form-group">
-    <label for="inputEmail1" class="col-lg-2 control-label">Direccion*</label>
+    <label for="inputEmail1" class="col-lg-2 control-label"> Nombre Usuario*</label>
     <div class="col-md-6">
-      <input type="text" name="direccion" required class="form-control" id="direccion" placeholder="Direccion del Usuario">
+      <input type="text" name="usuario" required class="form-control" id="usuario" placeholder="Usuario">
     </div>
   </div>
 
+
+<form class="form-horizontal" method="post" id="addlibro" action="index.php?view=addlibro" role="form">
+<div class="form-group">
+    <label for="inputEmail1" class="col-lg-2 control-label"> E-mail*</label>
+    <div class="col-md-6">
+      <input type="text" name="email" required class="form-control" id="email" placeholder="E-mail">
+    </div>
+  </div>
+
+
 <form class="form-horizontal" method="post" id="addlibro" action="index.php?view=addlibro" role="form">
     <div class="form-group">
-    <label for="inputEmail1" class="col-lg-2 control-label">Telefono*</label>
+    <label for="inputEmail1" class="col-lg-2 control-label">Contraseña*</label>
     <div class="col-md-6">
-      <input type="text" name="telefono" required class="form-control" id="telefono" placeholder="Telefono del Usuario">
+      <input type="password" name="password" required class="form-control" id="contraseña" placeholder="Password">
     </div>
   </div>
 
