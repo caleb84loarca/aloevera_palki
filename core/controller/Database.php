@@ -5,7 +5,7 @@ class Database {
 	public static $id;
 	
 	function Database(){
-		$this->user="root";$this->pass="";$this->host="localhost";$this->ddbb="aloepalki";
+		$this->user="root";$this->pass="";$this->host="localhost";$this->ddbb="aloeverapalki";
 	}
 
 	function connect(){

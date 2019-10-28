@@ -3,20 +3,20 @@
 // define('LBROOT',getcwd()); // LegoBox Root ... the server root
 // include("core/controller/Database.php");
 
-if(!isset($_SESSION["usuario"])) {
+if(!isset($_SESSION["user_id"])) {
 $user = $_POST['username'];
-$pass = sha1(md5($_POST['password']));
+$pass = sha1(md5($_POST['contrasena']));
 
 $base = new Database();
 $con = $base->connect();
- $sql = "select * from usuario where (username= \"".$user."\") and password= \"".$pass."\" and idusuario=1";
+ $sql = "select * from usuario where (username= \"".$user."\") and contrasena= \"".$pass."\" and idusuario=1";
 //print $sql;
 $query = $con->query($sql);
 $found = false;
 $userid = null;
 while($r = $query->fetch_array()){
 	$found = true ;
-	$userid = $r['iduser'];
+	$userid = $r['idusuario'];
 }
 
 if($found==true) {
