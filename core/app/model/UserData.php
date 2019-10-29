@@ -5,29 +5,29 @@ class UserData {
 
 
 	public function Userdata(){
-		$this->name1 = "";
-		$this->name2 = "";
-		$this->lastname1 = "";
-		$this->lastname2 = "";
+		$this->nombre1 = "";
+		$this->nombre2 = "";
+		$this->apellido1 = "";
+		$this->apellido2 = "";
 		$this->username = "";
 		$this->email = "";
-		$this->password = "";
+		$this->contrasena = "";
 		$this->image = "";
-		$this->created_at = "NOW()";
+		$this->fechacreacion = "NOW()";
 	}
 
 	public function add(){
-		$sql = "insert into usuario (nombre1,nombre2,apellido1,apellido2,username,email,password,idusuario,fechacreacion) ";
-		$sql .= "value (\"$this->name1\",\"$this->name2\",\"$this->lastname1\",\"$this->lastname2\",\"$this->username\",\"$this->email\",\"$this->password\",\"$this->idusuario\",$this->created_at)";
+		$sql = "insert into usuario (nombre1,nombre2,apellido1,apellido2,username,email,contrasena,imagen,fechacreacion) ";
+		$sql .= "value (\"$this->nombre1\",\"$this->nombre2\",\"$this->apellido1\",\"$this->apellido2\",\"$this->username\",\"$this->email\",\"$this->contrasena\",$this->created_at)";
 		Executor::doit($sql);
 	}
 
 	public static function delById($id){
-		$sql = "delete from ".self::$tablename." where iduser=$id";
+		$sql = "delete from ".self::$tablename." where idusuario=$id";
 		Executor::doit($sql);
 	}
 	public function del(){
-		$sql = "delete from ".self::$tablename." where iduser=$this->id";
+		$sql = "delete from ".self::$tablename." where idusuario=$this->id";
 		Executor::doit($sql);
 	}
 
@@ -44,7 +44,7 @@ class UserData {
 
 
 	public static function getById($id){
-		$sql = "select * from ".self::$tablename." where idusuario=$id";
+		$sql = "select * from ".self::$tablename." where id=$id";
 		$query = Executor::doit($sql);
 		return Model::one($query[0],new UserData());
 

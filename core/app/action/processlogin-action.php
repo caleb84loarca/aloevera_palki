@@ -5,24 +5,24 @@
 
 if(!isset($_SESSION["user_id"])) {
 $user = $_POST['username'];
-$pass = sha1(md5($_POST['contrasena']));
+$pass = $_POST['contrasena'];
 
 $base = new Database();
 $con = $base->connect();
- $sql = "select * from usuario where (username= \"".$user."\") and contrasena= \"".$pass."\" and idusuario=1";
+ $sql = "select * from usuario where (username= \"".$user."\") and contrasena= \"".$pass."\";
 //print $sql;
 $query = $con->query($sql);
 $found = false;
 $userid = null;
 while($r = $query->fetch_array()){
 	$found = true ;
-	$userid = $r['idusuario'];
+	$userid = $r['username'];
 }
 
 if($found==true) {
 //	session_start();
 //	print $userid;
-	$_SESSION['nombre1']=$userid ;
+	$_SESSION['user_id']=$user ;
 //	setcookie('userid',$userid);
 //	print $_SESSION['userid'];
 	print "Cargando ... $userid";

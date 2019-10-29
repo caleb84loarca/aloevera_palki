@@ -48,7 +48,7 @@
   <body class="<?php if(isset($_SESSION["user_id"]) || isset($_SESSION["client_id"])):?>  skin-blue-light sidebar-mini <?php else:?>login-page<?php endif; ?> "
   style="background-image: url(image/fondoverde.jpg); background-size: 100% > <div class="wrapper">
       <!-- Main Header -->
-      <?php if(isset($_SESSION["user_id"]) || isset($_SESSION["client_id"])):?>
+      <?php if(isset($_SESSION["user_id"]) || isset($_SESSION["client-id"])):?>
       <header class="main-header">
         <!-- Logo -->
         
@@ -154,8 +154,9 @@
       </aside>
     <?php endif;?>
 
+<!-- pantalla de inicio -->
       <!-- Content Wrapper. Contains page content -->
-      <?php if(isset($_SESSION["user_id"]) || isset($_SESSION["client_id"])):?>
+      <?php if(isset($_SESSION["user_id"]) || isset($_SESSION["contrasena"])):?>
       <div class="content-wrapper" style="background-image: url(image/fondoverde2.jpg); background-size: 100% > <div class="wrapper">
       <div class="content" >
         <?php View::load("index");?>
@@ -185,7 +186,7 @@
             <span class="glyphicon glyphicon-user form-control-feedback"></span>
           </div>
           <div class="form-group has-feedback">
-            <input type="password" name="password" required class="form-control" placeholder="Password"/>
+            <input type="password" name="contrasena" required class="form-control" placeholder="Password"/>
             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
           </div>
 

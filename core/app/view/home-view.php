@@ -1,6 +1,6 @@
 <?php
 $found=true;
-$libros = LibrosData::getAll();
+$usuario = UserData::getAll();
 	?>
 
 	
@@ -20,7 +20,7 @@ $libros = LibrosData::getAll();
           <!-- small box -->
           <div class="small-box bg-black">
             <div class="inner">
-              <h3><?php echo count(LibrosData::getAll());?></h3>
+              <h3><?php echo count(UserData::getAll());?></h3>
 
               <p>Vales de Compra</p>
             </div>
@@ -81,7 +81,7 @@ $libros = LibrosData::getAll();
 
 </div>
 <div class="clearfix"></div>
-<?php if(count($libros)>0){?>
+<?php if(count($usuario)>0){?>
 <br><table class="table table-bordered table-hover">
 	<thead>
 		<th >Id</th>
@@ -91,8 +91,8 @@ $libros = LibrosData::getAll();
 		<th></th>
 	</thead>
 	<?php
-foreach($libros as $libro):
-	$autor =  $libro->getAutor();
+foreach($usuarios as $usuario):
+	$usuarios =  $usuario->getAll();
 	?>
 
 	<tr>
