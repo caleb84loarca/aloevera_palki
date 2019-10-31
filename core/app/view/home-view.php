@@ -91,15 +91,15 @@ $usuario = UserData::getAll();
 		<th></th>
 	</thead>
 	<?php
-foreach($usuarios as $usuario):
-	$usuarios =  $usuario->getAll();
+foreach($usuario as $usuarios):
+	   $usuario;
 	?>
 
 	<tr>
-		<td><?php echo $libro->id; ?></td>
-		<td><?php echo $libro->nombre; ?></td>
-		<td><?php echo $autor->nombre." ".$autor->apellido; ?></td>
-		<td><?php echo $libro->anio_edicion; ?></td>
+		<td><?php echo $usuarios->idusuario; ?></td>
+		<td><?php echo $usuarios->nombre1; ?></td>
+		<td><?php echo $usuarios->apellido1." ".$usuarios->apellido2; ?></td>
+		<td><?php echo $usuarios->fechacreacion; ?></td>
 
 	</tr>
 

@@ -34,18 +34,25 @@ class UserData {
 
 // partiendo de que ya tenemos creado un objecto UserData previamente utilizamos el contexto
 	public function update(){
-		$sql = "update ".self::$tablename." set nombre1=\"$this->name1\",nombre2=\"$this->name2\",apellido1=\"$this->lastname1\",apellido2=\"$this->lastname2\",username=\"$this->username\",email=\"$this->email\",password=\"$this->password\",idusuario=\"$this->idusuario\",idusuario=\"$this->idusuario\" where id=$this->idusuario";
+		$sql = "update ".self::$tablename." set nombre1=\"$this->nombre1\",nombre2=\"$this->nombre2\",apellido1=\"$this->apellido1\",apellido2=\"$this->apellido2\",username=\"$this->username\" ";
 		Executor::doit($sql);
 	}
 
 	public function update_passwd(){
-		$sql = "update ".self::$tablename." set contrasena=\"$this->password\" where idusuario=$this->id";
+		$sql = "update ".self::$tablename." set contrasena=\"$this->contrasena\" where idusuario=$this->idusuario";
 		Executor::doit($sql);
 	}
 
 
 	public static function getById($id){
 		$sql = "select * from ".self::$tablename." where idusuario=$id";
+		$query = Executor::doit($sql);
+		return Model::one($query[0],new UserData());
+
+	}
+
+	public static function updateById($id){
+		$sql = "update ".self::$tablename." set nombre1=\"$this->nombre1\",nombre2=\"$this->nombre2\",apellido1=\"$this->apellido1\",apellido2=\"$this->apellido2\",username=\"$this->username\",where idusuario=$id";
 		$query = Executor::doit($sql);
 		return Model::one($query[0],new UserData());
 
@@ -73,9 +80,6 @@ class UserData {
 
 	}
 
-	public function getUsuario(){ 
-		return AutorData::getById($this->idusuario);
-	}
 	
 
 }
