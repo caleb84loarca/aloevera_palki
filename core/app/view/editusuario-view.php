@@ -68,7 +68,7 @@ $usuario = UserData::getById($_GET["id"]);
 
   <div class="form-group">
     <div class="col-lg-offset-2 col-lg-10">
-    <input type="hidden" name="idusuario" value="<?php echo $usuario->idusuario;?>">
+    <input type="hidden" name="iduser" value="<?php echo $usuario->idusuario;?>">
       <button type="submit" class="btn btn-primary">Actualizar Usuario</button>
     </div>
   </div>
