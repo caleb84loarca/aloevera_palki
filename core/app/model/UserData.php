@@ -5,6 +5,7 @@ class UserData {
 
 
 	public function Userdata(){
+		$this->idusuario = "";
 		$this->nombre1 = "";
 		$this->nombre2 = "";
 		$this->apellido1 = "";
@@ -72,6 +73,10 @@ class UserData {
 
 	}
 
+	public function getUsuario(){ 
+		return AutorData::getById($this->idusuario);
+	}
+	
 
 }
 

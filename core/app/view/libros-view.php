@@ -13,34 +13,35 @@
 		</div>  
 
 
-		<h1>Listado de Vales</h1>
+		<h1>Listado de Usuarios</h1>
 		<br>
 		<?php
          
-		$libros = LibrosData::getAll();
-		if(count($libros)>0){
+		$usuario = UserData::getAll();
+		if(count($usuario)>0){
 			// si hay usuarios
 			?>
 
 			<table class="table table-bordered table-hover">
 			<thead>
 			<th>Nombre</th>
-			<th>Autor</th>
-			<th>Fecha Edicion</th>
-			<th></th>
+			<th>Apellido</th>
+			<th>UserName</th>
+			<th>Fecha Creacion</th>
 			</thead>
 			<?php
-			foreach($libros as $libro){
-			$autor =  $libro->getAutor();
+			foreach($usuario as $usuarios){
+				$usuario;
 			?>
 				<tr>
-				<td><?php echo $libro->nombre; ?></td>
-				<td><?php echo $autor->nombre." ".$autor->apellido; ?></td>
-				<td><?php echo $libro->anio_edicion; ?></td>
+				<td><?php echo $usuarios->nombre1." ".$usuarios->nombre2; ?></td>
+				<td><?php echo $usuarios->apellido1." ".$usuarios->apellido2; ?></td>
+				<td><?php echo $usuarios->username; ?></td>
+				<td><?php echo $usuarios->fechacreacion; ?></td>
 				<td style="width:150px;">
-				<a href="index.php?view=editlibro&id=<?php echo $libro->id;?>" class="btn btn-warning btn-xs">Editar</a>
-				<a href="index.php?view=dellibro&id=<?php echo $libro->id;?>" class="btn btn-danger btn-xs">Eliminar</a>
-                <a href="index.php?view=viewlibro&id=<?php echo $libro->id; ?>" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-eye-open"></i></a></td>
+				<a href="index.php?view=editlibro&id=<?php echo $usuario->idusuario;?>" class="btn btn-warning btn-xs">Editar</a>
+				<a href="index.php?view=dellibro&id=<?php echo $usuario->idusuario;?>" class="btn btn-danger btn-xs">Eliminar</a>
+                <a href="index.php?view=viewlibro&id=<?php echo $usuario->idusuario; ?>" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-eye-open"></i></a></td>
 
 				</td>
 				</tr>
