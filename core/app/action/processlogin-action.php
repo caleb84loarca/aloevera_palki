@@ -22,7 +22,7 @@ while($r = $query->fetch_array()){
 if($found==true) {
 //	session_start();
 //	print $userid;
-	$_SESSION['user_id']=$user ;
+	$_SESSION['user_id']=$userid ;
 //	setcookie('userid',$userid);
 //	print $_SESSION['userid'];
 	print "Cargando ... $userid";
