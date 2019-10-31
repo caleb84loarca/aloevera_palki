@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-10-2019 a las 21:49:01
+-- Tiempo de generación: 31-10-2019 a las 06:12:34
 -- Versión del servidor: 10.4.8-MariaDB
 -- Versión de PHP: 7.3.10
 
@@ -3141,15 +3141,17 @@ CREATE TABLE `usuario` (
   `email` varchar(50) DEFAULT NULL,
   `contrasena` varchar(8) DEFAULT NULL,
   `imagen` varchar(60) DEFAULT NULL,
-  `idtipouser` int(11) DEFAULT NULL
+  `idtipouser` int(11) DEFAULT NULL,
+  `fechacreacion` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`idusuario`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `username`, `email`, `contrasena`, `imagen`, `idtipouser`) VALUES
-(1, 'Caleb', 'Humberto', 'Loarca', 'Morales', 'cloarca', 'caleb@palki.com.gt', 'admin', '', 1);
+INSERT INTO `usuario` (`idusuario`, `nombre1`, `nombre2`, `apellido1`, `apellido2`, `username`, `email`, `contrasena`, `imagen`, `idtipouser`, `fechacreacion`) VALUES
+(1, 'Caleb', 'Humberto', 'Loarca', 'Morales', 'cloarca', 'caleb@palki.com.gt', 'admin', '', 1, '2019-10-18'),
+(2, 'Mario', 'Estuardo', 'Perez', 'Oliva', 'admin', 'mario@palki.com.gt', 'admin', '', 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -3347,7 +3349,7 @@ ALTER TABLE `tipousuario`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `vale`
