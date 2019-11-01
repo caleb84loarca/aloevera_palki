@@ -9,7 +9,7 @@ if(count($_POST)>0){
 	$usuario->apellido2 = $_POST["apellidos2"];
 	$usuario->username = $_POST["usernames"];
 	$usuario->contrasena = $_POST["contrasenas"];
-	
+	$usuario->idtipouser = $_POST["tipouser_id"];
 	
 	$usuario->update();
 

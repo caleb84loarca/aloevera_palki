@@ -1,22 +1,11 @@
 <?php
-class PersonData {
-	public static $tablename = "person";
+class tipoUserData {
+	public static $tablename = "tipousuario";
 
 
-	public function PersonData(){
-		$this->name = "";
-		$this->lastname = "";
-		$this->email1 = "";
-		$this->phone1 = "";
-		$this->phone2 = "";
-		$this->address1 = "";
-		$this->company = "";
-		$this->kind = "";
-		$this->sueldo = "";
-		$this->licencia = "";
-		$this->dpi = "";
-		$this->nit = "";
-		$this->created_at = "NOW()";
+	public function tipoUserData(){
+		$this->idtipouser = "";
+		$this->usuario = "";		
 	}
 
 	public function add_provider(){
@@ -93,20 +82,11 @@ class PersonData {
 		//print_r($sql);
 		$query = Executor::doit($sql);
 		$found = null;
-		$data = new PersonData();
+		$data = new tipoUserData();
 		while($r = $query[0]->fetch_array()){
-		$data->id = $r['id'];
-			$data->name = $r['name'];
-			$data->lastname = $r['lastname'];
-			$data->address1 = $r['address1'];
-			$data->company = $r['company'];
-			$data->nit = $r['NIT'];
-			$data->kind = $r['kind'];
-			$data->phone1 = $r['phone1'];
-		    $data->phone2 = $r['phone2'];
-			$data->email1 = $r['email1'];
-			$data->created_at = $r['created_at'];
-			$data->sueldo = $r['sueldo'];
+			$data->idtipouser = $r['name'];
+			$data->usuario = $r['lastname'];
+		
 			$found = $data;
 			break;
 		}
@@ -119,7 +99,7 @@ class PersonData {
 		$sql = "select * from ".self::$tablename." where id=$id";
 		$query = Executor::doit($sql);
 		$found = null;
-		$data = new PersonData();
+		$data = new tipoUserData();
 		while($r = $query[0]->fetch_array()){
 		$data->id = $r['id'];
 			$data->name = $r['name'];
@@ -144,7 +124,7 @@ class PersonData {
 		$sql = "select * from ".self::$tablename." where id=$id";
 		$query = Executor::doit($sql);
 		$found = null;
-		$data = new PersonData();
+		$data = new tipoUserData();
 		while($r = $query[0]->fetch_array()){
 			$data->id = $r['id'];
 			$data->name = $r['name'];
@@ -165,23 +145,19 @@ class PersonData {
 		public static function getAllPP(){
 		$sql = "select * from ".self::$tablename." order by name asc ";
 		$query = Executor::doit($sql);
-		return Model::many($query[0],new PersonData());
+		return Model::many($query[0],new tipoUserData());
 	}
 
+//solo esta funcion es la que esta funcionando en este archivo
 	public static function getAll(){
-		$sql = "select * from ".self::$tablename. " order by kind||name asc ";
+		$sql = "select * from ".self::$tablename. " order by idtipouser asc ";
 		$query = Executor::doit($sql);
 		$array = array();
 		$cnt = 0;
 		while($r = $query[0]->fetch_array()){
-			$array[$cnt] = new PersonData();
-			$array[$cnt]->id = $r['id'];
-			$array[$cnt]->name = $r['name'];
-			$array[$cnt]->lastname = $r['lastname'];
-			$array[$cnt]->email = $r['email1'];
-			$array[$cnt]->phone1 = $r['phone1'];
-			$array[$cnt]->address1 = $r['address1'];
-			$array[$cnt]->created_at = $r['created_at'];
+			$array[$cnt] = new tipoUserData();
+			$array[$cnt]->idtipouser = $r['idtipouser'];
+			$array[$cnt]->usuario = $r['usuario'];
 			$cnt++;
 		}
 		return $array;
@@ -194,7 +170,7 @@ class PersonData {
 		$array = array();
 		$cnt = 0;
 		while($r = $query[0]->fetch_array()){
-			$array[$cnt] = new PersonData();
+			$array[$cnt] = new tipoUserData();
 			$array[$cnt]->id = $r['id'];
 			$array[$cnt]->name = $r['name'];
 			$array[$cnt]->lastname = $r['lastname'];
@@ -220,7 +196,7 @@ class PersonData {
 		$array = array();
 		$cnt = 0;
 		while($r = $query[0]->fetch_array()){
-			$array[$cnt] = new PersonData();
+			$array[$cnt] = new tipoUserData();
 			$array[$cnt]->id = $r['id'];
 			$array[$cnt]->name = $r['name'];
 			$array[$cnt]->lastname = $r['lastname'];
@@ -244,7 +220,7 @@ class PersonData {
 		$array = array();
 		$cnt = 0;
 		while($r = $query[0]->fetch_array()){
-			$array[$cnt] = new PersonData();
+			$array[$cnt] = new tipoUserData();
 			$array[$cnt]->id = $r['id'];
 			$array[$cnt]->name = $r['name'];
 			$array[$cnt]->lastname = $r['lastname'];
@@ -267,7 +243,7 @@ class PersonData {
 		$array = array();
 		$cnt = 0;
 		while($r = $query[0]->fetch_array()){
-			$array[$cnt] = new PersonData();
+			$array[$cnt] = new tipoUserData();
 			$array[$cnt]->id = $r['id'];
 			$array[$cnt]->name = $r['name'];
 			$array[$cnt]->lastname = $r['lastname'];
@@ -292,7 +268,7 @@ class PersonData {
 		$array = array();
 		$cnt = 0;
 		while($r = $query[0]->fetch_array()){
-			$array[$cnt] = new PersonData();
+			$array[$cnt] = new tipoUserData();
 			$array[$cnt]->id = $r['id'];
 			$array[$cnt]->name = $r['name'];
 			$array[$cnt]->lastname = $r['lastname'];
@@ -316,7 +292,7 @@ class PersonData {
 		$array = array();
 		$cnt = 0;
 		while($r = $query[0]->fetch_array()){
-			$array[$cnt] = new PersonData();
+			$array[$cnt] = new tipoUserData();
 			$array[$cnt]->id = $r['id'];
 			$array[$cnt]->name = $r['name'];
 			$array[$cnt]->lastname = $r['lastname'];
@@ -339,7 +315,7 @@ class PersonData {
 		$array = array();
 		$cnt = 0;
 		while($r = $query[0]->fetch_array()){
-			$array[$cnt] = new PersonData();
+			$array[$cnt] = new tipoUserData();
 			$array[$cnt]->id = $r['id'];
 			$array[$cnt]->name = $r['name'];
 			$array[$cnt]->mail = $r['mail'];
@@ -352,7 +328,7 @@ class PersonData {
 		public static function getAllPiloto(){
 		$sql = "select * from ".self::$tablename." where  kind=3 order by name asc ";
 		$query = Executor::doit($sql);
-		return Model::many($query[0],new PersonData());
+		return Model::many($query[0],new tipoUserData());
 	}
 
 

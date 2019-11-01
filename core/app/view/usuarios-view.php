@@ -1,7 +1,8 @@
 <div class="row">
 	<div class="col-md-12">
 		<div class="btn-group pull-right">
-			<a href="index.php?view=newvales" class="btn btn-default"><i class='fa fa-book'></i> Nuevo Vale</a>
+			<a href="index.php?view=newuser" class="btn btn-default"><i class='fa fa-book'></i> Nuevo Usuario</a>
+												
 				<div class="btn-group pull-right">
 					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 						<i class="fa fa-download"></i> Descargar <span class="caret"></span>
@@ -31,8 +32,8 @@
 			<th>Fecha Creacion</th>
 			</thead>
 			<?php
-			foreach($usuario as $usuarios){
-				$usuario;
+				foreach($usuario as $usuarios){
+					$usuario;
 			?>
 				<tr>
                 <td><?php echo $usuarios->idusuario; ?></td>
@@ -50,7 +51,7 @@
 				<?php
 
 			}
-
+			echo "</table>";
 
 		}else{
 			echo "<p class='alert alert-danger'>No hay usuarios en el sistema</p>";

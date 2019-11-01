@@ -1,7 +1,7 @@
 <?php 
 
 $usuario = UserData::getById($_GET["id"]);
-
+$tipouser = tipoUserData::getAll();
 
 ?>
 <div class="row">
@@ -61,6 +61,17 @@ $usuario = UserData::getById($_GET["id"]);
     <div class="col-md-6">
       <input type="text" name="contrasenas" value="<?php echo $usuario->contrasena;?>" class="form-control" id="contrasenas" placeholder="Contrasena">
     </div>
+  </div>
+
+  <div class="form-group">
+    <label for="inputEmail1" class="col-lg-2 control-label">Tipo de Usuario*</label>
+    <div class="col-md-6">
+    <select name="tipouser_id" required class="form-control">
+    <option value="">-- NINGUNO --</option>
+    <?php foreach($tipouser as $tipousers):?>
+      <option value="<?php echo $tipousers->idtipouser;?>"><?php echo $tipousers->idtipouser." - ".$tipousers->usuario;?></option>
+    <?php endforeach;?>
+      </select>    </div>
   </div>
     
 

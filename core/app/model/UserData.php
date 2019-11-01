@@ -14,12 +14,14 @@ class UserData {
 		$this->email = "";
 		$this->contrasena = "";
 		$this->image = "";
+		$this->idtipouser = "";
 		$this->fechacreacion = "NOW()";
 	}
 
 	public function add(){
-		$sql = "insert into usuario (nombre1,nombre2,apellido1,apellido2,username,email,contrasena,imagen,fechacreacion) ";
-		$sql .= "value (\"$this->nombre1\",\"$this->nombre2\",\"$this->apellido1\",\"$this->apellido2\",\"$this->username\",\"$this->email\",\"$this->contrasena\",$this->created_at)";
+		$sql = "insert into `usuario`(`nombre1`, `nombre2`, `apellido1`, `apellido2`, `username`, `email`, `contrasena`, `idtipouser`, `fechacreacion`)";
+		$sql .= "VALUES (\"$this->nombre1\",\"$this->nombre2\",\"$this->apellido1\",\"$this->apellido2\",\"$this->username\",\"$this->email\",\"$this->contrasena\",\"$this->idtipouser\",\"$this->fechacreacion\")";
+
 		Executor::doit($sql);
 	}
 
@@ -34,7 +36,7 @@ class UserData {
 
 // partiendo de que ya tenemos creado un objecto UserData previamente utilizamos el contexto
 	public function update(){
-		$sql = "update ".self::$tablename." set nombre1=\"$this->nombre1\",nombre2=\"$this->nombre2\",apellido1=\"$this->apellido1\",apellido2=\"$this->apellido2\",username=\"$this->username\",where id=$this->idusuario";
+		$sql = "update `".self::$tablename."` set `nombre1`=\"$this->nombre1\", `nombre2`=\"$this->nombre2\", `apellido1`=\"$this->apellido1\", `apellido2`=\"$this->apellido2\", `username`=\"$this->username\", `contrasena`=\"$this->contrasena\", `idtipouser`=\"$this->idtipouser\", where `idusuario`=\"$this->idusuario\"";
 		Executor::doit($sql);
 	}
 

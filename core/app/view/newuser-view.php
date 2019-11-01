@@ -1,109 +1,110 @@
 <?php 
-$autores = AutorData::getAll();
+$usuarios = UserData::getAll();
 ?>
 
 <div class="row">
 	<div class="col-md-12">
-	<CENTER><h1>INGRESO USUARIOS</h1></CENTER>
+	<CENTER><h1>INGRESO DE USUARIOS</h1></CENTER>
     <img src="image/Palki.png" width="350" height="50">
 	<br>
     <br>
       <br>
 
 
-    <form class="form-horizontal" method="post" id="addlibro" action="index.php?view=addlibro" role="form">
-<div class="form-group">
-    <label for="inputEmail1" class="col-lg-2 control-label">Primer Nombre*</label>
-    <div class="col-md-6">
-      <input type="text" name="nombre" required class="form-control" id="nombre" placeholder="Primer Nombre Usuario">
-    </div>
-  </div>
-
-     <form class="form-horizontal" method="post" id="addlibro" action="index.php?view=addlibro" role="form">
-<div class="form-group">
-    <label for="inputEmail1" class="col-lg-2 control-label">Segundo Nombre*</label>
-    <div class="col-md-6">
-      <input type="text" name="nombre" required class="form-control" id="nombre" placeholder="Segundo Nombre Usuario">
-    </div>
-  </div>
-
-      <form class="form-horizontal" method="post" id="addlibro" action="index.php?view=addlibro" role="form">
-<div class="form-group">
-    <label for="inputEmail1" class="col-lg-2 control-label">Primer Apellido*</label>
-    <div class="col-md-6">
-      <input type="text" name="apellido" required class="form-control" id="apellido" placeholder="Primer Apellido Usuario">
-    </div>
-  </div>
-
-        <form class="form-horizontal" method="post" id="addlibro" action="index.php?view=addlibro" role="form">
-<div class="form-group">
-    <label for="inputEmail1" class="col-lg-2 control-label">Segundo Apellido*</label>
-    <div class="col-md-6">
-      <input type="text" name="apellido" required class="form-control" id="apellido" placeholder="Segundo Apellido Usuario">
-    </div>
-  </div>
+ <form class="form-horizontal" method="post" id="adduser" action="index.php?view=adduser" role="form">
 
 
-      <form class="form-horizontal" method="post" id="addlibro" action="index.php?view=addlibro" role="form">
-<div class="form-group">
-    <label for="inputEmail1" class="col-lg-2 control-label"> Nombre Usuario*</label>
-    <div class="col-md-6">
-      <input type="text" name="usuario" required class="form-control" id="usuario" placeholder="Usuario">
-    </div>
-  </div>
-
-
-<form class="form-horizontal" method="post" id="addlibro" action="index.php?view=addlibro" role="form">
-<div class="form-group">
-    <label for="inputEmail1" class="col-lg-2 control-label"> E-mail*</label>
-    <div class="col-md-6">
-      <input type="text" name="email" required class="form-control" id="email" placeholder="E-mail">
-    </div>
-  </div>
-
-
-<form class="form-horizontal" method="post" id="addlibro" action="index.php?view=addlibro" role="form">
     <div class="form-group">
-    <label for="inputEmail1" class="col-lg-2 control-label">Contraseña*</label>
-    <div class="col-md-6">
-      <input type="password" name="password" required class="form-control" id="contraseña" placeholder="Password">
-    </div>
-  </div>
+        <label for="inputEmail1" class="col-lg-2 control-label">Primer Nombre*</label>
+        <div class="col-md-6">
+          <input type="text" name="nombre1" required class="form-control" id="nombre1" placeholder="Primer Nombre Usuario">
+        </div>
+      </div>
 
-  <div class="col-md-6">
-          <label for="inputEmail1" class="col-lg-2 control-label">Departamento*</label>       
-          <select name="autor_id" required class="form-control">
-          <option value="">-- NINGUNO --</option>
-          <?php foreach($autores as $autor):?>
-          <option value="<?php echo $autor->id;?>"><?php echo $autor->nombre." ".$autor->apellido;?></option>
-          <?php endforeach;?>
-          </select>
-
-          <label for="inputEmail1" class="col-lg-2 control-label">Municipio*</label>       
-          <select name="autor_id" required class="form-control">
-          <option value="">-- NINGUNO --</option>
-          <?php foreach($autores as $autor):?>
-          <option value="<?php echo $autor->id;?>"><?php echo $autor->nombre." ".$autor->apellido;?></option>
-          <?php endforeach;?>
-          </select>
-
-          <label for="inputEmail1" class="col-lg-2 control-label">Categoria Precio*</label>       
-          <select name="autor_id" required class="form-control">
-          <option value="">-- NINGUNO --</option>
-          <?php foreach($autores as $autor):?>
-          <option value="<?php echo $autor->id;?>"><?php echo $autor->nombre." ".$autor->apellido;?></option>
-          <?php endforeach;?>
-          </select>
-    </div>
-     <br> 
-  <br> 
-<input type='hidden' name='insertar' value='insertar'>
  
- </div>
-  </div>
-   
-   
+        
+    <div class="form-group">
+        <label for="inputEmail1" class="col-lg-2 control-label">Segundo Nombre*</label>
+        <div class="col-md-6">
+          <input type="text" name="nombre2" required class="form-control" id="nombre2" placeholder="Segundo Nombre Usuario">
+        </div>
+      </div>
 
+       
+    <div class="form-group">
+        <label for="inputEmail1" class="col-lg-2 control-label">Primer Apellido*</label>
+        <div class="col-md-6">
+          <input type="text" name="apellido1" required class="form-control" id="apellido1" placeholder="Primer Apellido Usuario">
+        </div>
+      </div>
+
+      
+          
+    <div class="form-group">
+        <label for="inputEmail1" class="col-lg-2 control-label">Segundo Apellido*</label>
+        <div class="col-md-6">
+          <input type="text" name="apellido2" required class="form-control" id="apellido2" placeholder="Segundo Apellido Usuario">
+        </div>
+      </div>
+
+ 
+    <div class="form-group">
+        <label for="inputEmail1" class="col-lg-2 control-label"> Nombre Usuario*</label>
+        <div class="col-md-6">
+          <input type="text" name="username" required class="form-control" id="username" placeholder="Usuario">
+        </div>
+      </div>
+
+      
+    <div class="form-group">
+        <label for="inputEmail1" class="col-lg-2 control-label"> E-mail*</label>
+        <div class="col-md-6">
+          <input type="text" name="email" required class="form-control" id="email" placeholder="E-mail">
+        </div>
+      </div>
+
+
+     
+        <div class="form-group">
+        <label for="inputEmail1" class="col-lg-2 control-label">Contraseña*</label>
+        <div class="col-md-6">
+          <input type="password" name="contrasena" required class="form-control" id="contrasena" placeholder="Password">
+        </div>
+      </div>
+
+  
+        <div class="form-group">
+            <label for="inputEmail1" class="col-lg-2 control-label">Tipo de Usuario*</label>
+            <div class="col-md-6">
+              <div required class="radio">  
+                  <input type="radio" name="opcion" value="1" > Administrador
+                  <br>
+                  <input type="radio" name="opcion"  value="2" > OperadorDigital
+                  <br>
+                  <input type="radio" name="opcion"  value="3" > AnalistaCompra
+                  <br>
+                  <input type="radio" name="opcion" value="4" > DespachadorExportacion   
+              </div>         
+            </div>
+      </div>
+
+
+
+      <div class="form-group">
+        <label for="inputEmail1" class="col-lg-2 control-label">Fecha de Creacion*</label>
+          <div class="col-md-6">
+              <input type="date" name="sd"  required value="<?php if(isset($_GET["sd"])){ echo $_GET["sd"]; }?>" class="form-control">
+            </div>
+      </div>
+
+        
+        <br> 
+        <input type='hidden' name='insertar' value='insertar'>
+    
+    </div>
+  </div>
+      
+   
 
 <!-- boton y alerta-->
 
