@@ -38,7 +38,8 @@ class ProveeData {
 
 // partiendo de que ya tenemos creado un objecto UserData previamente utilizamos el contexto
 	public function update(){
-		$sql = "update `".self::$tablename."` set `nombre1`=\"$this->nombre1\", `nombre2`=\"$this->nombre2\", `apellido1`=\"$this->apellido1\", `apellido2`=\"$this->apellido2\", `username`=\"$this->username\", `contrasena`=\"$this->contrasena\", `idtipouser`=\"$this->idtipouser\", where `idusuario`=\"$this->idusuario\"";
+		$sql = "update `".self::$tablename."` set `nombre1`=\"$this->nombre1\", `nombre2`=\"$this->nombre2\", `apellido1`=\"$this->apellido1\", `apellido2`=\"$this->apellido2\",";
+		 $sql .="`nit`=\"$this->nit\", `dpi`=\"$this->dpi\", `direccion`=\"$this->direccion\", `telefono1`=\"$this->telefono1\", `telefono2`=\"$this->telefono2\", `idcatprecio`=\"$this->idcatprecio\", where `idprovee`=\"$this->idprovee\"";
 		Executor::doit($sql);
 	}
 

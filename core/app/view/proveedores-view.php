@@ -54,7 +54,7 @@
                 <td style="width:150px;">
 				<a href="index.php?view=editprovee&id=<?php echo $proveedors->idprovee;?>" class="btn btn-warning btn-xs">Editar</a>
 				<a href="index.php?view=dellibro&id=<?php echo $proveedors->idprovee;?>" class="btn btn-danger btn-xs">Eliminar</a>
-                <a href="index.php?view=viewlibro&id=<?php echo $proveedors->idprovee; ?>" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-eye-open"></i></a></td>
+                <a href="index.php?view=viewprovee&id=<?php echo $proveedors->idprovee; ?>" class="btn btn-xs btn-default"><i class="glyphicon glyphicon-eye-open"></i></a></td>
 
 				</td>
 				</tr>

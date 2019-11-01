@@ -7,10 +7,13 @@ if(count($_POST)>0){
 	$proveedor->nombre2 = $_POST["nombres2"];
 	$proveedor->apellido1 = $_POST["apellidos1"];
 	$proveedor->apellido2 = $_POST["apellidos2"];
-	$proveedor->username = $_POST["nit"];
-	$proveedor->contrasena = $_POST["dpi"];
-	$proveedor->contrasena = $_POST["direccion"];
-	$proveedor->idtipouser = $_POST["tipouser_id"];
+	$proveedor->nit = $_POST["nit"];
+	$proveedor->dpi = $_POST["dpi"];
+	$proveedor->direccion = $_POST["direccion"];
+	$proveedor->iddepartamento = $_POST["direccion"];
+	$proveedor->idmunicipio = $_POST["direccion"];
+	
+	//$proveedor->idtipouser = $_POST["idcatprecio"];
 	
 	$proveedor->update();
 

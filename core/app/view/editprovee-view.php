@@ -13,7 +13,8 @@ $tipouser = tipoUserData::getAll();
     <div class="form-group">
     <label for="inputEmail1" class="col-lg-2 control-label">ID PROVEEDOR*</label>
     <div class="col-md-6">
-      <input type="tex" name="idprove" disabled="disable" value="<?php echo $proveedor->idprovee;?>" class="form-control" id="idprovee" placeholder="ID PROVEEDOR">
+    <fieldset disabled>
+      <input type="tex" name="idprove"  value="<?php echo $proveedor->idprovee;?>" class="form-control" id="idprovee" placeholder="ID PROVEEDOR">
     </div>
   </div>
   
@@ -108,16 +109,16 @@ $tipouser = tipoUserData::getAll();
   </div>
 
 
-  <div class="form-group">
+ <!-- <div class="form-group">
     <label for="inputEmail1" class="col-lg-2 control-label">Tipo de Usuario*</label>
     <div class="col-md-6">
-    <select name="tipouser_id" required class="form-control">
+    <select name="tipouser_id"  class="form-control">
     <option value="">-- NINGUNO --</option>
     <?php foreach($tipouser as $tipousers):?>
       <option value="<?php echo $tipousers->idtipouser;?>"><?php echo $tipousers->idtipouser." - ".$tipousers->usuario;?></option>
     <?php endforeach;?>
       </select>    </div>
-  </div>
+  </div>   -->
     
 
   <p class="alert alert-info">* Campos obligatorios</p>
