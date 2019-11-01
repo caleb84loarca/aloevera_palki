@@ -126,7 +126,7 @@
               <a href="#"><i class='fa fa-database'></i> <span>Gestion de Proveedores</span> <i class="fa fa-angle-left pull-right"></i></a>
               <ul class="treeview-menu">
                 <li><a href="./?view=newproveedor">Ingreso de Proveedor</a></li>
-                <li><a href="./?view=libros">Listado de Proveedores</a></li>
+                <li><a href="./?view=proveedores">Listado de Proveedores</a></li>
         <li><a href="./?view=notas">Consulta de Proveedores</a></li>
          </ul>
              </li>  	  

@@ -36,13 +36,13 @@ $usuario = UserData::getAll();
           <!-- small box -->
           <div class="small-box bg-purple">
             <div class="inner">
-              <h3><?php echo count(UserData::getAll());?></h3>
+              <h3><?php echo count(ProveeData::getAll());?></h3>
              <p>Proveedores</p>
             </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
             </div>
-            <a href="./?view=clients" class="small-box-footer">Ver mas <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="./?view=proveedores" class="small-box-footer">Ver mas <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
               		
@@ -57,7 +57,7 @@ $usuario = UserData::getAll();
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
             </div>
-            <a href="./?view=clients" class="small-box-footer">Ver mas <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="./?view=usuarios" class="small-box-footer">Ver mas <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
                 
