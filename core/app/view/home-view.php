@@ -20,14 +20,14 @@ $usuario = UserData::getAll();
           <!-- small box -->
           <div class="small-box bg-black">
             <div class="inner">
-              <h3><?php echo count(UserData::getAll());?></h3>
+              <h3><?php echo count(valesData::getAll());?></h3>
 
               <p>Vales de Compra</p>
             </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
             </div>
-            <a href="./?view=libros" class="small-box-footer">Ver mas <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="./?view=vales" class="small-box-footer">Ver mas <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
 		
@@ -87,8 +87,7 @@ $usuario = UserData::getAll();
 		<th >Id</th>
 		<th>Nombre</th>
 		<th>Autor</th>
-		<th>Anio Edicion</th>
-		<th></th>
+		<th>Anio Edicion</th>		
 	</thead>
 	<?php
 foreach($usuario as $usuarios):

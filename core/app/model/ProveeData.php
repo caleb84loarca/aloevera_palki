@@ -12,23 +12,26 @@ class ProveeData {
 		$this->apellido2 = "";
 		$this->nit = "";
 		$this->dpi = "";
-		$this->direccioin = "";
-        $this->iddepartamento = "";
-        $this->idmunicipio = "";        
-        $this->telefono1 = "";
-        $this->telefono2 = "";
-		$this->ipcatprecio = "";
+		$this->direccion = "";
+		$this->iddepartamento = "";
+		$this->idmunicipio = "";
+		$this->telefono1 = "";
+		$this->telefono2 = "";
+		$this->idcatprecio = "";
+
 	}
 
 	public function add(){
-		$sql = "insert into `usuario`(`nombre1`, `nombre2`, `apellido1`, `apellido2`, `username`, `email`, `contrasena`, `idtipouser`, `fechacreacion`)";
-		$sql .= "VALUES (\"$this->nombre1\",\"$this->nombre2\",\"$this->apellido1\",\"$this->apellido2\",\"$this->username\",\"$this->email\",\"$this->contrasena\",\"$this->idtipouser\",\"$this->fechacreacion\")";
+		$sql = "insert into ".self::$tablename." (nombre1, nombre2, apellido1, apellido2, nit, dpi, direccion";
+		$sql .= "iddepartamento, idmunicipio, telefono1, telefono2, idcatprecio)";		
+		$sql .= "VALUES (\"$this->nombre1\",\"$this->nombre2\",\"$this->apellido1\",\"$this->apellido2\",\"$this->nit\",\"$this->dpi\",";
+		$sql .="\"$this->direccion\",\"$this->iddepartamento\",\"$this->idmunicipio\",\"$this->telefono1\",\"$this->telefono2\",\"$this->idcatprecio\")";
 
 		Executor::doit($sql);
 	}
 
 	public static function delById($id){
-		$sql = "delete from ".self::$tablename." where idusuario=$id";
+		$sql = "delete from ".self::$tablename." where idprovee=$id";
 		Executor::doit($sql);
 	}
 	public function del(){
@@ -38,8 +41,8 @@ class ProveeData {
 
 // partiendo de que ya tenemos creado un objecto UserData previamente utilizamos el contexto
 	public function update(){
-		$sql = "update `".self::$tablename."` set `nombre1`=\"$this->nombre1\", `nombre2`=\"$this->nombre2\", `apellido1`=\"$this->apellido1\", `apellido2`=\"$this->apellido2\",";
-		 $sql .="`nit`=\"$this->nit\", `dpi`=\"$this->dpi\", `direccion`=\"$this->direccion\", `telefono1`=\"$this->telefono1\", `telefono2`=\"$this->telefono2\", `idcatprecio`=\"$this->idcatprecio\", where `idprovee`=\"$this->idprovee\"";
+		$sql = "update ".self::$tablename." set nombre1=\"$this->nombre1\", nombre2=\"$this->nombre2\", apellido1=\"$this->apellido1\", apellido2=\"$this->apellido2\",";
+		 $sql .="nit=\"$this->nit\", dpi=\"$this->dpi\", direccion=\"$this->direccion\", telefono1=\"$this->telefono1\", telefono2=\"$this->telefono2\", idcatprecio=\"$this->idcatprecio\", where idprovee=\"$this->idprovee\"";
 		Executor::doit($sql);
 	}
 

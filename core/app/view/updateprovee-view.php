@@ -10,8 +10,8 @@ if(count($_POST)>0){
 	$proveedor->nit = $_POST["nit"];
 	$proveedor->dpi = $_POST["dpi"];
 	$proveedor->direccion = $_POST["direccion"];
-	$proveedor->iddepartamento = $_POST["direccion"];
-	$proveedor->idmunicipio = $_POST["direccion"];
+	$proveedor->iddepartamento = $_POST["depto_id"];
+	$proveedor->idmunicipio = $_POST["muni_id"];
 	
 	//$proveedor->idtipouser = $_POST["idcatprecio"];
 	

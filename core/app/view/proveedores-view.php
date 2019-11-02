@@ -1,7 +1,7 @@
 <div class="row">
 	<div class="col-md-12">
 		<div class="btn-group pull-right">
-			<a href="index.php?view=newuser" class="btn btn-default"><i class='fa fa-book'></i> Nuevo Proveedor</a>
+			<a href="index.php?view=newproveedor" class="btn btn-default"><i class='fa fa-book'></i> Nuevo Proveedor</a>
 												
 				<div class="btn-group pull-right">
 					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">

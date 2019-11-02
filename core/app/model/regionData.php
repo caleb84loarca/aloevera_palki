@@ -1,18 +1,16 @@
 <?php
-class LibrosData {
-	public static $tablename = "libros";
+class regionData {
+	public static $tablename = "region";
 
-	public function LibrosData(){
-     	$this->id = "";
-	    $this->nombre = "";
-		$this->autor_id = "";
-	    $this->user_id = "";
-		$this->anio_edicion = "";
-		
+	public function regionData(){
+     	$this->idregion = "";
+	    $this->region = "";
+		$this->iddepartamento = "";
+	    
 	}
 	
-	public function getUser(){ return UserData::getById($this->user_id);}
-    public function getAutor(){ return AutorData::getById($this->autor_id);}
+	public function getVale(){ return regionData::getById($this->numvale);}
+   // public function getAutor(){ return AutorData::getById($this->autor_id);}
 	
 	public function add(){
 		$sql = "insert into ".self::$tablename." (nombre, autor_id, user_id, anio_edicion) ";
@@ -68,7 +66,7 @@ class LibrosData {
 	public static function getAll(){
 		$sql = "select * from ".self::$tablename;
 		$query = Executor::doit($sql);
-		return Model::many($query[0],new LibrosData());
+		return Model::many($query[0],new regionData());
 	}
 
 

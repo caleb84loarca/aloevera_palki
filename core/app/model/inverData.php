@@ -1,13 +1,12 @@
 <?php
-class AutorData {
-	public static $tablename = "autor";
+class inverData {
+	public static $tablename = "invernadero";
 
 
-	public function AutorData(){
-		$this->nombre = "";
-		$this->apellido = "";
-		$this->nacionalidad = "";
-		$this->fecha = "NOW()";
+	public function inverData(){
+		$this->idinvernadero = "";
+		$this->invernadero = "";
+		
 	}
 
 	public function add(){
@@ -49,21 +48,27 @@ class AutorData {
 
 
 	public static function getAll(){
-		$sql = "select * from ".self::$tablename. " order by nombre asc ";
+		$sql = "select * from ".self::$tablename;
 		$query = Executor::doit($sql);
-		$array = array();
-		$cnt = 0;
-		while($r = $query[0]->fetch_array()){
-			$array[$cnt] = new AutorData();
-			$array[$cnt]->id = $r['id'];
-			$array[$cnt]->nombre = $r['nombre'];
-			$array[$cnt]->apellido = $r['apellido'];
-			$array[$cnt]->nacionalidad = $r['nacionalidad'];
-			$array[$cnt]->fecha = $r['fecha'];
-			$cnt++;
-		}
-		return $array;
+		return Model::many($query[0],new inverData());
 	}
+
+	//public static function getAll(){
+	//	$sql = "select * from ".self::$tablename. " order by medida asc ";
+	//	$query = Executor::doit($sql);
+	//	$array = array();
+	//	$cnt = 0;
+	//	while($r = $query[0]->fetch_array()){
+	//		$array[$cnt] = new medidaData();
+	//		$array[$cnt]->id = $r['id'];
+	//		$array[$cnt]->nombre = $r['nombre'];
+	//		$array[$cnt]->apellido = $r['apellido'];
+	//		$array[$cnt]->nacionalidad = $r['nacionalidad'];
+	//		$array[$cnt]->fecha = $r['fecha'];
+	//		$cnt++;
+	//	}
+	//	return $array;
+	//}
 
 	
 
