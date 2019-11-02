@@ -25,14 +25,14 @@ $invers = inverData::getAll();
                 </div>
             </div>
  
-  <div class="form-group">
+            <div class="form-group">
             <div class="col-md-3">
-                     <label for="inputEmail1" class="col-lg-6 control-label">Fecha de Ingreso*</label>
-                        <input type="date" name="sd"  required value="<?php if(isset($_GET["sd"])){ echo $_GET["sd"]; }?>" class="form-control">
+               <label for="inputEmail1" class="col-lg-6 control-label">Fecha de Ingreso*</label>
+                <input type="date" name="sd"  required value="<?php if(isset($_GET["sd"])){ echo $_GET["sd"]; }?>" class="form-control">
 <br>
 <br>
-                    <label for="inputEmail1" class="col-lg-4 control-label">Pedido</label>
-                    <input type="text" name="pedido" valor="vale_id" value="A"  placeholder="PEDIDO"> 
+                <label for="inputEmail1" class="col-lg-4 control-label">Pedido</label>
+                <input type="text" name="pedido" valor="vale_id" value="A"  placeholder="PEDIDO"> 
 <br>
 <br>
          
@@ -79,14 +79,16 @@ $invers = inverData::getAll();
       </div>
 </div> <!-- fin de encabezado de vale-->
 
-<textarea name="observacion" rows="5" cols="40" placeholder="Cuadro para Observaciones"></textarea>
+<textarea name="observacion" rows="5" cols="50" placeholder="Cuadro para Observaciones"></textarea>
 
 
 <!-- detalle del vale -->
 <fieldset>
  <legend>Ingreso Detalle Vale</legend>
   <div class="form-group">
- 
+
+  <form class="form-horizontal" method="post" id="addlinea" action="index.php?view=addvale" role="form">
+
       <div class="col-md-2">
       <label for="inputEmail1" class="col-lg-10 control-label">MEDIDA DE PLANTA</label>
     
@@ -125,19 +127,17 @@ $invers = inverData::getAll();
       <div class="col-md-2">
         <label for="inputEmail1" class="col-lg-10 control-label">PRECIO UNITARIO</label>
         <input type="number" id="preciou" valor="preciou" value="">
-       </div> 
-
-
-            <div class="col-md-2">
-                <label for="inputEmail1" class="col-lg-10 control-label">VALOR TOTAL</label>
-                <input type="text" name="valortotal" id="resultado" valor="valortotal" placeholder="operacion">
-                <output name="resultado" for="unidades preciou"></output>
-                
-            </div>
-            
+       </div>
+       
+        
+       <div class="col-lg-offset-2 col-lg-1">
+                <button type="submit" class="btn btn-primary">Agregar Linea</button>
+                </div>
             
             </form>
-
+            
+               
+            </form>
             
   </div>  <!--cierre ingreso detalle-->
 
@@ -161,7 +161,7 @@ $invers = inverData::getAll();
         <td>      </td>
         <td>      </td>
         <td>      </td>   
-        <td>      </td>   
+        <td>   <label id="resultado"></label>   </td>   
                 <td style="width:50px;">
 				<a href="index.php?view=delvale&id=<?php echo $vales->id;?>" class="btn btn-danger btn-xs">Eliminar</a>
                 </td>
