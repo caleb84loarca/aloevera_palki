@@ -12,7 +12,8 @@ class valesData {
 		$this->idusuario = "";
 		$this->idplanta = "";
 		$this->iddepartamento = "";
-		$this->idmunicipio = "";		
+		$this->idmunicipio = "";	
+		$this->observacion = "";				
 		
 	}
 	
@@ -34,7 +35,13 @@ class valesData {
 
 	
 	public function update(){
-	    $sql = "update ".self::$tablename." set nombre=\"$this->nombre\", autor_id=\"$this->autor_id\", user_id=\"$this->user_id\", anio_edicion=\"$this->anio_edicion\" where id=$this->id";
+		$sql = "update ".self::$tablename." set `numvale`=\"$this->numvale\",`fechacompra`=\"$this->fechacompra\",`pedido`=\"$this->pedido\",";
+		$sql .="`idprovee`=\"$this->idprovee\",`idregion`=\"$this->idregion\",`iddetallevale`=\"$this->iddetallevale\",`idrechazo`=\"$this->rechazo\",";
+		$sql .="`idusuario`=\"$this->idusuario\",`idplanta`=\"$this->idplanta\",`iddepartamento`=\"$this->iddepartamento\",`idmunicipio`=\"$this->idmunicipio\",";
+		$sql .="`observacion`=\"$this->observacion\"";
+		
+		
+
 		//print_r($sql);
 		Executor::doit($sql);
 	}	

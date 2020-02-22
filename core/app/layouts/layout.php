@@ -118,7 +118,7 @@
               <ul class="treeview-menu">
                 <li><a href="./?view=newvales">Ingreso de Vales</a></li>
                 <li><a href="./?view=vales">Listado de Vales</a></li>
-				<li><a href="./?view=vales">Consulta de Vales</a></li>
+				        <li><a href="./?view=vales">Consulta de Vales</a></li>
 			   </ul>
              </li>	
 
@@ -127,7 +127,7 @@
               <ul class="treeview-menu">
                 <li><a href="./?view=newproveedor">Ingreso de Proveedor</a></li>
                 <li><a href="./?view=proveedores">Listado de Proveedores</a></li>
-        <li><a href="./?view=proveedores">Consulta de Proveedores</a></li>
+                <li><a href="./?view=proveedores">Consulta de Proveedores</a></li>
          </ul>
              </li>  	  
 
@@ -136,19 +136,41 @@
               <ul class="treeview-menu">
                 <li><a href="./?view=newuser">Ingreso de Usuario</a></li>
                 <li><a href="./?view=usuarios">Listado de Usuarios</a></li>
-        <li><a href="./?view=usuarios">Consulta de Usuarios</a></li>
+                <li><a href="./?view=usuarios">Consulta de Usuarios</a></li>
          </ul>
              </li>  
 
-           <!-- <li class="treeview">
-              <a href="#"><i class='fa fa-database'></i> <span>Catalogos</span> <i class="fa fa-angle-left pull-right"></i></a>
+           <li class="treeview">
+              <a href="#"><i class='fa fa-database'></i> <span>Catalogo Reportes</span> <i class="fa fa-angle-left pull-right"></i></a>
               <ul class="treeview-menu">
-                <li><a href="./?view=categories">Proveedores</a></li>
-				<li><a href="./?view=umedida">Usuarios</a></li> -->
+                <li><a href="./?view=construccion">Compra por proveedor</a></li>
+				        <li><a href="./?view=construccion">Compra por Municipio</a></li> 
 	 
               </ul>
             </li>
 			           
+
+            <li class="treeview">
+              <a href="#"><i class='fa fa-database'></i> <span>Gestion de Exportacion</span> <i class="fa fa-angle-left pull-right"></i></a>
+              <ul class="treeview-menu">
+                <li><a href="./?view=construccion">Ingreso de Packing</a></li>
+                <li><a href="./?view=construccion">Ingreso de Reclamos</a></li>
+                <li><a href="./?view=construccion">Listado de Packing</a></li>
+                <li><a href="./?view=construccion">Listado de Reclamos</a></li>                
+                <li><a href="./?view=construccion">Consulta de Reclamos</a></li>
+         </ul>
+             </li>  
+
+           <li class="treeview">
+              <a href="#"><i class='fa fa-database'></i> <span>Catalogo Reportes</span> <i class="fa fa-angle-left pull-right"></i></a>
+              <ul class="treeview-menu">
+                <li><a href="./?view=construccion">Compra por proveedor</a></li>
+				<li><a href="./?view=construccion">Compra por Municipio</a></li> 
+	 
+              </ul>
+            </li>
+
+
           <?php endif;?>
 
           </ul><!-- /.sidebar-menu -->

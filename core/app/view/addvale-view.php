@@ -11,9 +11,9 @@ if(count($_POST)>0){
 	$vale->iddetallevale = $_POST["email"];	
 	$vale->idrechazo = $_POST["contrasena"];
 	$vale->idusuario = $_POST["opcion"];
-	$vale->idplanta = $_POST["sd"];
+	$vale->idplanta = $_POST["medida_id"];
 	$vale->iddepartamento = $_POST["depto_id"];
-    $vale->idmunicipio = $_POST["opcion"];
+    $vale->idmunicipio = $_POST["muni_id"];
     $vale->observacion = $_POST["observacion"];
 		
 	$vale->add();

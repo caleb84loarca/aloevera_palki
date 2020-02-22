@@ -68,7 +68,7 @@ $invers = inverData::getAll();
           <?php endforeach;?>
           </select>
 
-          <select name="autor_id" required class="form-control">
+          <select name="muni_id" required class="form-control">
           <option value="">-- NINGUNO --</option>
           <?php foreach($munis as $muni):?>
           <option value="<?php echo $muni->idmunicipio;?>"><?php echo $muni->municipio." - ".$muni->idmunicipio;?></option>
@@ -117,7 +117,7 @@ $invers = inverData::getAll();
             </div>   
 
 
-            <form method="POST" oninput="resultado.value=parseInt(unidades.value)*parseInt(preciou.value)">
+         <!--   <form method="POST" oninput="resultado.value=parseInt(unidades.value)*parseInt(preciou.value)"> -->
   
             <div class="col-md-2">
                 <label for="inputEmail1" class="col-lg-8 control-label">UNIDADES</label>
@@ -130,11 +130,11 @@ $invers = inverData::getAll();
        </div>
        
         
-       <div class="col-lg-offset-2 col-lg-1">
+       <!-- <div class="col-lg-offset-2 col-lg-1">
                 <button type="submit" class="btn btn-primary">Agregar Linea</button>
-                </div>
+                </div> -->
             
-            </form>
+            
             
                
             </form>
